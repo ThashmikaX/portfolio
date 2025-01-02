@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 const clash = localFont({
   src: [
     {
-      path: "./fonts/OKAYSERIF-BOLD.ttf",
+      path: "./OKAYSERIF-BOLD.ttf",
       weight: "500",
     },
   ],
