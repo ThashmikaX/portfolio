@@ -45,8 +45,8 @@ export default function Hero() {
               </text>
             </svg>
             <div className="flex items-center mt-[-120px]">
-              <span className="text-[300px] italic mr-4">&</span>
-              <span className="text-[300px] font-bold tracking-wide bg-gradient-to-r text-[#161616] bg-clip-text text-transparent">
+              <span className="text-[300px]  mr-4">&</span>
+              <span className="text-[300px] text-[#161616]">
                 Designer
               </span>
             </div>
