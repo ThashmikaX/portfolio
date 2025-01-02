@@ -102,24 +102,20 @@ function Navbar() {
 
   return (
     <nav className={"flex-[0_0_auto] sticky top-0 z-50 flex justify-center"}>
-      <div className="absolute w-full backdrop-blur-lg bg-black bg-opacity-50">
+      <div className="absolute w-full backdrop-blur-lg bg-black bg-opacity-0">
         <div className=" relative lg:text-[16px] w-full">
           <div className="py-4 px-4 md:px-16 md:py-3 flex justify-between items-center">
             <div className="flex items-center flex-shrink-0">
-              <Link href="/#home">
-                <img
-                  className={"mr-2 duration-500 h-10 md:h-[48px]"}
-                  src="/assets/Logo.png"
-                  alt="Logo"
-                />
-              </Link>
+              <button className="px-6 py-3 bg-black text-white font-medium rounded hover:bg-gray-800 transition-colors">
+            ThashmikaX
+          </button>
             </div>
-            <ul className="hidden lg:flex ml-14 space-x-12 text-white">
+            <ul className="hidden lg:flex ml-14 space-x-12 text-black">
               {navItems.map((item, index) => (
                 <li
                   key={index}
-                  className={cn("focus:text-[#fef837]", {
-                    "bg-text-gradient text-[#fef837] bg-clip-text":
+                  className={cn("focus:text-[#9a9a9a]", {
+                    "bg-text-gradient text-[#9a9a9a] bg-clip-text":
                       activeLink === item.label,
                   })}
                 >
@@ -160,7 +156,7 @@ function Navbar() {
                       key={index}
                       className={
                         activeLink == item.label
-                          ? "bg-text-gradient text-[#fef837] bg-clip-text"
+                          ? "bg-text-gradient text-[#9a9a9a] bg-clip-text"
                           : undefined
                       }
                     >
@@ -202,18 +198,18 @@ const HamburgerMenu = (props: { toggleMenu: () => void; isOpen: boolean }) => (
   >
     <span
       className={clsx(
-        "block w-full h-0.5 bg-white transform transition duration-300",
+        "block w-full h-0.5 bg-black transform transition duration-300",
         { "rotate-45 translate-y-1.5": props.isOpen }
       )}
     ></span>
     <span
-      className={clsx("block w-full h-0.5 bg-white transition duration-300", {
+      className={clsx("block w-full h-0.5 bg-black transition duration-300", {
         "opacity-0": props.isOpen,
       })}
     ></span>
     <span
       className={clsx(
-        "block w-full h-0.5 bg-white transform transition duration-300",
+        "block w-full h-0.5 bg-black transform transition duration-300",
         { "-rotate-45 -translate-y-1.5": props.isOpen }
       )}
     ></span>

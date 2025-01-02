@@ -6,12 +6,12 @@ import Sudesh from "../../public/assets/sudesh.png";
 
 export default function Hero() {
   return (
-    <div className="min-h-full h-full bg-white px-4 py-16 sm:px-6 lg:px-8">
+    <div className="min-h-screen h-screen bg-white px-4 py-16 sm:px-6 lg:px-8">
       {/* Main Content Container */}
-      <div className="min-h-screen max-w-full h-full justify-center">
+      <div className="min-h-screen max-w-full h-screen justify-center">
         {/* Typography Layer */}
-        <div className="flex flex-col items-center justify-center h-full z-10 top-0">
-          <h1 className="flex flex-col items-center">
+        <div className="relative flex flex-col items-center justify-center top-16">
+          <h1 className="flex flex-col items-center top-36">
             <svg width="100%" height="300">
               <text 
                 x="50%" 
@@ -22,16 +22,16 @@ export default function Hero() {
                   fontSize: "300px", 
                   letterSpacing: "10px",
                   fill: "none",
-                  stroke: "black",
+                  stroke: "#161616",
                   strokeWidth: "2px"
                 }}
               >
                 Engineer
               </text>
             </svg>
-            <div className="flex items-center -mt-30">
+            <div className="flex items-center mt-[-120px]">
               <span className="text-[300px] italic mr-4">&</span>
-              <span className="text-[300px] font-bold tracking-wide bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
+              <span className="text-[300px] font-bold tracking-wide bg-gradient-to-r text-[#161616] bg-clip-text text-transparent">
           Designer
               </span>
             </div>
@@ -39,11 +39,11 @@ export default function Hero() {
         </div>
 
         {/* Image Container */}
-        <div className="absolute left-1/2 transform -translate-x-1/2 bottom-0 z-0 w-150 h-auto">
+        <div className="absolute left-1/2 transform -translate-x-1/2 bottom-0 z-0">
             <Image
               src={Sudesh}
               alt="Profile"
-              className="relative z-10 w-150 h-auto object-cover grayscale"
+              className="relative z-10 w-150 h-auto object-cover grayscale bottom-0 pb-0"
             />
         </div>
 
