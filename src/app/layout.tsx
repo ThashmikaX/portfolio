@@ -1,15 +1,23 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/context/ThemeContext";
-import { ThemeToggle } from "@/components/ThemeToggle";
-
-const inter = Inter({ subsets: ["latin"] });
+import Navbar from "@/components/Navbar";
+// import Footer from "@/components/Footer";
+import localFont from "next/font/local";
 
 export const metadata: Metadata = {
   title: "Sudesh Thashmika",
   description: "I'm Sudesh Thashmika, and I am currently pursuing my undergraduate studies in Computer Engineering at the University of Ruhuna.",
 };
+
+const clash = localFont({
+  src: [
+    {
+      path: "/fonts/OKAYSERIF-BOLD.ttf",
+      weight: "500",
+    },
+  ],
+  variable: "--font-clash",
+});
 
 export default function RootLayout({
   children,
@@ -17,15 +25,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="light" suppressHydrationWarning>
-      <head />
-      <body className={`${inter.className} min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-200`} suppressHydrationWarning>
-        <ThemeProvider>
-          <div className="relative">
-            <ThemeToggle />
-            {children}
-          </div>
-        </ThemeProvider>
+    <html lang="en" className="scroll-smooth">
+      <head>
+        <link
+          href="https://api.fontshare.com/v2/css?f[]=clash-display@500&display=swap"
+          rel="stylesheet"
+        ></link>
+      </head>
+      <body className={clash.className}>
+            <div className="flex flex-col min-h-[100dvh]">
+              <Navbar />
+              {children}
+              {/* <Footer /> */}
+            </div>
       </body>
     </html>
   );
