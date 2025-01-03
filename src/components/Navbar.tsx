@@ -102,8 +102,8 @@ function Navbar() {
 
   return (
     <nav className={"flex-[0_0_auto] sticky top-0 z-50 flex justify-center"}>
-      <div className="absolute w-full backdrop-blur-lg bg-black bg-opacity-0">
-        <div className=" relative lg:text-[16px] w-full">
+      <div className="absolute backdrop-blur-lg bg-black bg-opacity-0 w-full">
+        <div className=" relative lg:text-[16px]">
           <div className="py-4 px-4 md:px-16 md:py-3 flex justify-between items-center">
             <div className="flex items-center flex-shrink-0">
               <button className="px-6 py-3 bg-black text-white font-medium rounded hover:bg-gray-800 transition-colors">
@@ -161,7 +161,7 @@ function Navbar() {
                       }
                     >
                       <div
-                        className="hover:cursor-pointer nav-link"
+                        className="hover:cursor-pointer nav-link py-2"
                         onClick={() => {
                           if (!item.isSeperatePage && currentPath === "home") {
                             scrolltoHash(item.href);
