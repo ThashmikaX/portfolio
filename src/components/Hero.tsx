@@ -4,7 +4,6 @@ import React, { useEffect, useState } from "react";
 import { StaticImageData } from 'next/image';
 import Image from 'next/image';
 import Sudesh from "../../public/assets/sudesh.png";
-import SudeshSVG from "../../public/assets/sudesh.svg";
 import PointerIcon from "../../public/assets/pointer-icon.svg";
 import { TextHoverEffect } from "@/components/ui/text-hover-effect";
 import { FollowerPointerCard } from "@/components/ui/following-pointer";
@@ -82,7 +81,7 @@ export default function Hero() {
         }
       >
           <Image
-            src={SudeshSVG}
+            src={Sudesh}
             alt="Profile"
             className=" mx-auto -z-20"
               />
