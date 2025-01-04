@@ -161,7 +161,7 @@ function Navbar() {
                       }
                     >
                       <div
-                        className="hover:cursor-pointer nav-link py-2"
+                        className="hover:cursor-pointer nav-link py-2 px-8"
                         onClick={() => {
                           if (!item.isSeperatePage && currentPath === "home") {
                             scrolltoHash(item.href);
