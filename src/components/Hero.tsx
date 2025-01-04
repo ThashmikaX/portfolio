@@ -105,7 +105,7 @@ export default function Hero() {
         {/* Image Container for mobile*/}
         <div className=" bottom-0 z-0 w-full lg:w-150 lg:opacity-0 lg:absolute mb-0 mt-auto">
           <Image
-            src={SudeshSVG}
+            src={Sudesh}
             alt="Profile"
             className=" mx-auto"
             />
