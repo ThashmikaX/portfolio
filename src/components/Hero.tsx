@@ -3,6 +3,9 @@
 import React, { useEffect, useState } from "react";
 import Image from 'next/image';
 import Sudesh from "../../public/assets/sudesh.png";
+import SudeshSVG from "../../public/assets/sudesh.svg";
+import Engineer from "../../public/assets/Engineer.png";
+import { TextHoverEffect } from "@/components/ui/text-hover-effect";
 
 export default function Hero() {
   const handleDownload = () => {
@@ -21,13 +24,16 @@ export default function Hero() {
   };
 
   return (
-    <div className="min-h-screen h-screen bg-white px-4 py-16 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-white px-4 py-16 sm:px-6 lg:px-8">
       {/* Main Content Container */}
-      <div className="min-h-screen max-w-screen h-screen justify-center">
+      <div className="min-h-screen max-w-screen justify-center">
         {/* Typography Layer */}
-        <div className="mx-auto items-center justify-center text-center mt-10">
-          <h1 className="flex mx-auto flex-col items-center">
-            <svg width="100%" height="300">
+        <div className="mx-auto items-center justify-center text-center lg:mt-10 h-[100px]">
+          <h1 className="flex mx-auto flex-col items-center justify-center">
+            <div className="h-[20vw] flex items-center justify-center w-full z-999">
+              <TextHoverEffect text="Engineer" />
+            </div>
+            {/* <svg width="100%" height="300">
               <text 
           x="50%" 
           y="50%"
@@ -43,26 +49,36 @@ export default function Hero() {
               >
           Engineer
               </text>
-            </svg>
-            <div className="flex items-center lg:mt-[-6vw] mt-[-130px]">
-              <span className="text-[15vw] mr-4">&</span>
+            </svg> */}
+            <div className="flex items-center lg:mt-[-6vw] mx-auto">
+              <span className="text-[15vw] mr-4 text-[#161616]">&</span>
               <span className="text-[15vw] text-[#161616]">
           Designer
               </span>
             </div>
           </h1>
+          {/* Download button for mobile */}
           <button 
             onClick={handleDownload}
-            className="px-6 py-3 bg-black text-white font-medium rounded hover:bg-gray-800 transition-colors z-50"
+            className="px-6 py-3 bg-black text-white font-medium rounded hover:bg-gray-800 transition-colors z-50 lg:opacity-0"
           >
             Download CV
           </button>
         </div>
 
         {/* Image Container */}
-        <div className="absolute left-1/2 -translate-x-1/2 bottom-0 z-0 w-full lg:w-150">
+        <div className="absolute left-1/2 -translate-x-1/2 bottom-0 w-full lg:w-150 opacity-0 lg:opacity-100">
           <Image
-            src={Sudesh}
+            src={SudeshSVG}
+            alt="Profile"
+            className=" mx-auto -z-20"
+          />
+        </div>
+
+        {/* Image Container for mobile*/}
+        <div className=" bottom-0 z-0 w-full lg:w-150 lg:opacity-0 lg:absolute mb-0 mt-auto">
+          <Image
+            src={SudeshSVG}
             alt="Profile"
             className=" mx-auto"
           />
