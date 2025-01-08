@@ -7,6 +7,7 @@ import Sudesh from "../../public/assets/sudesh.png";
 import PointerIcon from "../../public/assets/pointer-icon.svg";
 import { TextHoverEffect } from "@/components/ui/text-hover-effect";
 import { FollowerPointerCard } from "@/components/ui/following-pointer";
+import Engineer from "@/../public/assets/Engineer.svg";
 
 export default function Hero() {
   const handleDownload = () => {
@@ -31,9 +32,11 @@ export default function Hero() {
         {/* Typography Layer */}
         <div className="mx-auto items-center justify-center text-center lg:mt-10 h-[100px] mt-20">
           <h1 className="flex mx-auto flex-col items-center justify-center">
-            <div className="h-[20vw] flex items-center justify-center w-full z-999">
+
+            {/* <div className="h-[20vw] flex items-center justify-center w-full z-999">
               <TextHoverEffect text="Engineer" />
-            </div>
+            </div> */}
+
             {/* <svg width="100%" height="300">
               <text 
           x="50%" 
@@ -51,6 +54,11 @@ export default function Hero() {
           Engineer
               </text>
             </svg> */}
+
+            <div className=" flex items-center justify-center w-full z-999">
+              <Image className="h-[15vw]" src={Engineer} alt="Engineer" />
+            </div>
+            
             <div className="flex items-center lg:mt-[-6vw] mx-auto mt-[-8vw]">
               <span className="text-[15vw] mr-4 text-[#161616]">&</span>
               <span className="text-[15vw] text-[#161616]">
