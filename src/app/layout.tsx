@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 // import Footer from "@/components/Footer";
 import localFont from "next/font/local";
+import {ReactLenis} from '@/utils/lenis'
 
 export const metadata: Metadata = {
   title: "Sudesh Thashmika",
@@ -32,13 +33,15 @@ export default function RootLayout({
           rel="stylesheet"
         ></link>
       </head>
+      <ReactLenis root> 
       <body className={clash.className}>
             <div className="flex flex-col min-h-[100dvh]">
               <Navbar />
               {children}
               {/* <Footer /> */}
             </div>
-      </body>
+        </body>
+      </ReactLenis>
     </html>
   );
 }
